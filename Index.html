@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ahmed El-Hassan | Video Editor & Graphic Designer</title>
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/ncYD54Kx/Untitled-design-10.png"/>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed El-Hassan | Video Editor &amp; Graphic Designer</title>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/ncYD54Kx/Untitled-design-10.png">
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -34,40 +34,33 @@
       font-size: 18px;
     }
 
-    .banner img {
-      width: 100%;
-      max-height: 350px;
-      object-fit: cover;
-      border-radius: 0;
-      display: block;
-      margin-top: 60px;
-    }
-
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 120px 20px 60px;
+      background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
     }
 
     header img {
       border-radius: 50%;
-      width: 160px;
-      max-width: 80%;
+      width: 320px;
       box-shadow: 0 0 30px #00ffcc;
-      margin: 30px auto 20px;
-      display: block;
+      margin-bottom: 20px;
+      transition: all 0.4s ease;
     }
 
     h1 {
-      font-size: 34px;
+      font-size: 40px;
       margin-bottom: 10px;
+      transition: font-size 0.3s ease;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 32px;
       border-bottom: 2px solid #00ffcc;
       padding-bottom: 5px;
       text-align: center;
       margin-top: 40px;
+      transition: font-size 0.3s ease;
     }
 
     p {
@@ -76,6 +69,7 @@
       max-width: 900px;
       margin: 10px auto;
       padding: 0 20px;
+      transition: font-size 0.3s ease;
     }
 
     .section {
@@ -133,6 +127,44 @@
       border-radius: 8px;
       cursor: pointer;
       display: none;
+      z-index: 999;
+    }
+
+    #mobileToggle {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    body.mobile-mode header img {
+      width: 160px;
+    }
+
+    body.mobile-mode h1 {
+      font-size: 28px;
+    }
+
+    body.mobile-mode h2 {
+      font-size: 24px;
+    }
+
+    body.mobile-mode p {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+
+    body.mobile-mode nav a {
+      font-size: 14px;
+      margin: 0 10px;
     }
 
     .fade-in {
@@ -145,18 +177,9 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    @media (max-width: 768px) {
-      header img { width: 120px; }
-      .banner img { max-height: 200px; }
-      h1 { font-size: 28px; }
-      h2 { font-size: 24px; }
-    }
   </style>
 </head>
-<body>
-
-  <!-- Navigation -->
+<body class="mobile-mode">
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -164,20 +187,17 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Banner First -->
-  <section class="banner">
-    <img src="https://i.postimg.cc/cCcLDcp5/Professional-Video-Editor-Banner.png" alt="Video Editor Banner" />
+  <section>
+    <img src="https://i.postimg.cc/cCcLDcp5/Professional-Video-Editor-Banner.png" alt="Video Editor Banner" style="width: 100%; border-radius: 10px; margin-bottom: 0;">
   </section>
 
-  <!-- Logo and Name -->
-  <header class="fade-in">
-    <img src="https://i.postimg.cc/ncYD54Kx/Untitled-design-10.png" alt="Ahmed El-Hassan Logo" />
+  <header class="fade-in visible">
+    <img src="https://i.postimg.cc/ncYD54Kx/Untitled-design-10.png" alt="Ahmed El-Hassan Logo">
     <h1>Ahmed El-Hassan</h1>
-    <p>🎬 Video Editor & 🎨 Graphic Designer</p>
+    <p>🎬 Video Editor &amp; 🎨 Graphic Designer</p>
   </header>
 
-  <!-- About Section -->
-  <section class="section fade-in" id="about">
+  <section class="section fade-in visible" id="about">
     <h2>About Me</h2>
     <p>
       I’m Ahmed – a creative video editor and graphic designer passionate about turning ideas into stunning visual stories.
@@ -185,14 +205,13 @@
     </p>
   </section>
 
-  <!-- Services Section -->
-  <section class="section fade-in" id="services">
+  <section class="section fade-in visible" id="services">
     <h2>Services</h2>
     <p>
       <strong>🎬 Video Editing</strong><br>
       - Gaming videos, YouTube Shorts, Vlogs<br>
       - Voiceovers, Captions, Color Grading<br>
-      - Motion Graphics & Transitions<br><br>
+      - Motion Graphics &amp; Transitions<br><br>
 
       <strong>🎨 Graphic Design</strong><br>
       - Thumbnails, Social Media Posts<br>
@@ -200,54 +219,47 @@
     </p>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="section fade-in" id="portfolio">
+  <section class="section fade-in visible" id="portfolio">
     <h2>Portfolio</h2>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact fade-in" id="contact">
+  <section class="contact fade-in visible" id="contact">
     <h2>Contact Me</h2>
     <a href="https://wa.me/201205846158" target="_blank">📞 WhatsApp 01205846158</a>
     <a href="https://www.behance.net/ahmedea1" target="_blank">🎨 Behance</a>
     <a href="https://www.linkedin.com/in/ahmed-elhassan-988b60376/" target="_blank">💼 LinkedIn</a>
   </section>
 
-  <!-- Footer -->
   <footer>
     © 2025 Ahmed El-Hassan — All Rights Reserved.
   </footer>
 
-  <!-- Back to Top -->
-  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Back to Top</button>
+  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="display: block;">⬆ Back to Top</button>
+  <button id="mobileToggle">🖥️ Desktop Mode</button>
 
   <script>
-    // Back to Top
     const backToTop = document.getElementById("backToTop");
     window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
+      backToTop.style.display = (window.scrollY > 200) ? "block" : "none";
     };
 
-    // Fade In
     const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
-    };
-    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       });
-    }, appearOptions);
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    faders.forEach(f => observer.observe(f));
+
+    const toggleBtn = document.getElementById("mobileToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("mobile-mode");
+      toggleBtn.innerText = document.body.classList.contains("mobile-mode") ? "🖥️ Desktop Mode" : "📱 Mobile Only";
     });
   </script>
-</body>
-</html>
+
+
+</body></html>
