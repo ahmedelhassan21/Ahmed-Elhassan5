@@ -38,11 +38,10 @@
 
     .banner img {
       width: 100%;
-      max-height: 300px;
+      max-height: 350px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 0;
       display: block;
-      margin: 0 auto;
       margin-top: 60px;
     }
 
@@ -53,19 +52,20 @@
 
     header img {
       border-radius: 50%;
-      width: 180px;
+      width: 160px;
       max-width: 80%;
       box-shadow: 0 0 30px #00ffcc;
-      margin-bottom: 20px;
+      margin: 30px auto 20px;
+      display: block;
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 28px;
       border-bottom: 2px solid #00ffcc;
       padding-bottom: 5px;
       text-align: center;
@@ -150,12 +150,19 @@
 
     @media (max-width: 768px) {
       header img {
-        width: 140px;
-        margin-top: 30px;
+        width: 120px;
       }
 
       .banner img {
         max-height: 200px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
       }
     }
   </style>
@@ -170,13 +177,13 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Banner Section -->
+  <!-- Banner First -->
   <section class="banner">
     <img src="https://i.postimg.cc/cCcLDcp5/Professional-Video-Editor-Banner.png" alt="Video Editor Banner" />
   </section>
 
-  <!-- Logo and Intro -->
-  <header class="fade-in visible">
+  <!-- Logo and Name -->
+  <header class="fade-in">
     <img src="https://i.postimg.cc/ncYD54Kx/Untitled-design-10.png" alt="Ahmed El-Hassan Logo" />
     <h1>Ahmed El-Hassan</h1>
     <p>🎬 Video Editor & 🎨 Graphic Designer</p>
@@ -209,7 +216,6 @@
   <!-- Portfolio Section -->
   <section class="section fade-in" id="portfolio">
     <h2>Portfolio</h2>
-    <!-- Add portfolio items here -->
   </section>
 
   <!-- Contact Section -->
@@ -225,10 +231,9 @@
     © 2025 Ahmed El-Hassan — All Rights Reserved.
   </footer>
 
-  <!-- Back to Top Button -->
+  <!-- Back to Top -->
   <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">⬆ Back to Top</button>
 
-  <!-- Scripts -->
   <script>
     // Back to Top
     const backToTop = document.getElementById("backToTop");
@@ -240,7 +245,7 @@
       }
     };
 
-    // Fade In Animation
+    // Fade In
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
       threshold: 0.1,
